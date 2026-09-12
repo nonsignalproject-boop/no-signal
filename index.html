@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #0d0d0d;
+            background-color: #080808;
             color: #ffffff;
             min-height: 100vh;
             display: flex;
@@ -25,30 +25,30 @@
             background: #ffffff;
             color: #000000;
             text-align: center;
-            padding: 8px 12px;
+            padding: 9px 12px;
             font-size: 0.72rem;
             font-weight: 700;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
         }
 
-        /* Navigation Header */
+        /* Header Navigation */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 22px 50px;
             background: #000000;
-            border-bottom: 1px solid #1a1a1a;
+            border-bottom: 1px solid #181818;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .logo-brand {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 900;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
             color: #ffffff;
             text-decoration: none;
@@ -57,15 +57,15 @@
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 32px;
         }
 
         nav a, .dropdown-btn {
             color: #aaaaaa;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             background: none;
             border: none;
@@ -88,10 +88,10 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #0d0d0d;
+            background-color: #0c0c0c;
             border: 1px solid #222222;
-            min-width: 180px;
-            box-shadow: 0px 10px 20px rgba(0,0,0,0.9);
+            min-width: 190px;
+            box-shadow: 0px 12px 24px rgba(0,0,0,0.9);
             z-index: 10;
             padding: 12px 0;
             margin-top: 10px;
@@ -103,6 +103,7 @@
             display: block;
             font-size: 0.75rem;
             text-align: left;
+            letter-spacing: 0.12em;
         }
 
         .dropdown-content a:hover {
@@ -116,19 +117,19 @@
 
         /* Hero Banner Section */
         .hero {
-            height: 70vh;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1770') center/cover;
-            border-bottom: 1px solid #1a1a1a;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1770') center/cover;
+            border-bottom: 1px solid #181818;
         }
 
         .hero h1 {
-            font-size: 3.8rem;
+            font-size: 4rem;
             font-weight: 900;
             letter-spacing: 0.25em;
             margin-bottom: 12px;
@@ -137,107 +138,136 @@
 
         .hero p {
             font-size: 0.85rem;
-            letter-spacing: 0.2em;
-            color: #cccccc;
-            margin-bottom: 30px;
+            letter-spacing: 0.22em;
+            color: #888888;
+            margin-bottom: 32px;
             text-transform: uppercase;
         }
 
         .btn-hero {
             background: #ffffff;
             color: #000000;
-            padding: 14px 36px;
+            padding: 15px 40px;
             font-weight: 800;
-            font-size: 0.8rem;
-            letter-spacing: 0.2em;
+            font-size: 0.78rem;
+            letter-spacing: 0.22em;
             text-decoration: none;
             text-transform: uppercase;
             border: none;
             cursor: pointer;
+            transition: background 0.2s ease;
         }
 
-        /* Product Catalog Section */
+        .btn-hero:hover {
+            background: #cccccc;
+        }
+
+        /* Catalog Section */
         .catalog-container {
-            max-width: 1280px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 70px 24px;
             width: 100%;
         }
 
+        .catalog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 45px;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 15px;
+        }
+
         .section-title {
-            text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 800;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            margin-bottom: 40px;
             color: #ffffff;
+        }
+
+        .catalog-status {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: #888888;
+            text-transform: uppercase;
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 32px;
         }
 
         /* Product Card */
         .product-card {
             background-color: #111111;
-            border: 1px solid #222222;
-            padding: 20px;
+            border: 1px solid #202020;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .product-card:hover {
             border-color: #444444;
+            transform: translateY(-3px);
         }
 
         .product-badge {
             font-size: 0.65rem;
+            font-weight: 700;
             letter-spacing: 0.15em;
-            color: #888888;
+            color: #777777;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .product-title {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 800;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .product-desc {
             font-size: 0.75rem;
-            color: #777777;
-            margin-bottom: 15px;
+            color: #888888;
+            margin-bottom: 18px;
             line-height: 1.4;
         }
 
         .product-price {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 700;
             letter-spacing: 0.1em;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             color: #ffffff;
         }
 
         /* Size Selector */
+        .size-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            color: #666666;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
         .size-selector {
             display: flex;
             gap: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .size-btn {
-            background: #1a1a1a;
+            background: #181818;
             color: #888888;
-            border: 1px solid #333333;
-            padding: 6px 12px;
+            border: 1px solid #2a2a2a;
+            padding: 7px 14px;
             font-size: 0.7rem;
             font-weight: 700;
             cursor: pointer;
@@ -255,10 +285,10 @@
             background: transparent;
             color: #ffffff;
             border: 1px solid #ffffff;
-            padding: 12px;
+            padding: 13px;
             font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
+            font-weight: 800;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -272,12 +302,12 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 35px 20px;
             font-size: 0.7rem;
-            color: #444444;
-            letter-spacing: 0.15em;
+            color: #555555;
+            letter-spacing: 0.18em;
             background: #000000;
-            border-top: 1px solid #1a1a1a;
+            border-top: 1px solid #181818;
             margin-top: auto;
         }
     </style>
@@ -296,8 +326,8 @@
             <div class="dropdown">
                 <button class="dropdown-btn">SHOP ▾</button>
                 <div class="dropdown-content">
-                    <a href="#catalog">HOODIES</a>
                     <a href="#catalog">T-SHIRTS</a>
+                    <a href="#catalog">HOODIES</a>
                     <a href="#catalog">SHIRTS</a>
                     <a href="#catalog">ACCESSORIES</a>
                 </div>
@@ -317,7 +347,10 @@
 
     <!-- Catalog Section -->
     <section class="catalog-container" id="catalog">
-        <h2 class="section-title">DROP 01 — CATALOG</h2>
+        <div class="catalog-header">
+            <h2 class="section-title">DROP 01 — CATALOG</h2>
+            <div class="catalog-status">STATUS: COMING SOON</div>
+        </div>
         
         <div class="product-grid">
 
@@ -328,6 +361,7 @@
                     <div class="product-title">SIGNAL LOST</div>
                     <div class="product-desc">Montañas + paisaje distorsionado + NO SIGNAL.</div>
                     <div class="product-price">$45.00</div>
+                    <div class="size-label">SELECT SIZE</div>
                     <div class="size-selector">
                         <button class="size-btn">S</button>
                         <button class="size-btn active">M</button>
@@ -345,6 +379,7 @@
                     <div class="product-title">VOID</div>
                     <div class="product-desc">Símbolo de señal/glitch + estatua en la espalda.</div>
                     <div class="product-price">$45.00</div>
+                    <div class="size-label">SELECT SIZE</div>
                     <div class="size-selector">
                         <button class="size-btn">S</button>
                         <button class="size-btn active">M</button>
@@ -362,6 +397,7 @@
                     <div class="product-title">OCEAN MIND</div>
                     <div class="product-desc">Fotografía de ola + mensaje sobre desconexión.</div>
                     <div class="product-price">$45.00</div>
+                    <div class="size-label">SELECT SIZE</div>
                     <div class="size-selector">
                         <button class="size-btn">S</button>
                         <button class="size-btn active">M</button>
@@ -379,6 +415,7 @@
                     <div class="product-title">HIGHER GROUND</div>
                     <div class="product-desc">Ilustración de montañas + "HIGHER GROUND".</div>
                     <div class="product-price">$45.00</div>
+                    <div class="size-label">SELECT SIZE</div>
                     <div class="size-selector">
                         <button class="size-btn">S</button>
                         <button class="size-btn active">M</button>
@@ -396,6 +433,7 @@
                     <div class="product-title">LOST COAST</div>
                     <div class="product-desc">Costa/montañas + estética vintage lavada.</div>
                     <div class="product-price">$48.00</div>
+                    <div class="size-label">SELECT SIZE</div>
                     <div class="size-selector">
                         <button class="size-btn">S</button>
                         <button class="size-btn active">M</button>
@@ -413,6 +451,7 @@
                     <div class="product-title">NO SIGNAL WORLD</div>
                     <div class="product-desc">Globo terráqueo + coordenadas.</div>
                     <div class="product-price">$45.00</div>
+                    <div class="size-label">SELECT SIZE</div>
                     <div class="size-selector">
                         <button class="size-btn">S</button>
                         <button class="size-btn active">M</button>
@@ -430,6 +469,7 @@
                     <div class="product-title">INNER NOISE</div>
                     <div class="product-desc">Gráfico de señal/glitch + mensaje sobre el ruido mental.</div>
                     <div class="product-price">$48.00</div>
+                    <div class="size-label">SELECT SIZE</div>
                     <div class="size-selector">
                         <button class="size-btn">S</button>
                         <button class="size-btn active">M</button>
