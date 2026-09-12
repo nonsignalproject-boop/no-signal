@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NO SIGNAL® — Clothing Company</title>
+  <meta name="description" content="NO SIGNAL® — Clothing Company. EST. 2024.">
+  <style>
+    :root{--bg:#090909;--text:#f1f1ee;--muted:#9a9a95;--line:#292929;--red:#d92727}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;letter-spacing:.04em}
+    a{color:inherit;text-decoration:none} button{font:inherit}
+    header{position:fixed;z-index:10;top:0;width:100%;height:76px;background:rgba(9,9,9,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw}
+    .brand{font-weight:900;font-size:24px;letter-spacing:-.06em}.brand span{font-size:10px;vertical-align:top}
+    nav{display:flex;gap:32px;font-size:11px;letter-spacing:.28em;text-transform:uppercase}
+    .bag{font-size:11px;letter-spacing:.18em}
+    .hero{min-height:92vh;padding:150px 5vw 70px;display:grid;grid-template-columns:1fr 1.35fr;gap:5vw;align-items:center;border-bottom:1px solid var(--line)}
+    .hero-copy{max-width:500px}.eyebrow{font-size:10px;letter-spacing:.4em;color:var(--muted);margin-bottom:22px}
+    h1{font-size:clamp(58px,9vw,145px);line-height:.78;margin:0 0 30px;letter-spacing:-.075em;font-weight:900}
+    .pulse{display:flex;align-items:center;gap:12px;width:210px;margin:22px 0 28px}.pulse:before,.pulse:after{content:"";height:1px;background:var(--text);flex:1}
+    .pulse i{width:2px;height:38px;background:var(--text);display:block;transform:skew(-10deg);box-shadow:7px 0 0 #666,-7px 0 0 #666}
+    .lead{font-size:12px;line-height:1.9;color:#bdbdb8;max-width:360px}
+    .cta{display:inline-block;margin-top:28px;border:1px solid #555;padding:15px 24px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;transition:.25s}
+    .cta:hover{background:var(--text);color:#000}
+    .hero-photo{height:65vh;min-height:420px;background:
+      linear-gradient(110deg,rgba(0,0,0,.4),rgba(0,0,0,.05)),
+      radial-gradient(circle at 55% 35%,#4a4a45 0,#20201e 32%,#111 67%,#090909 100%);
+      position:relative;overflow:hidden}
+    .hero-photo:after{content:"NO SIGNAL";position:absolute;right:-4%;bottom:8%;font-size:clamp(70px,13vw,190px);font-weight:900;letter-spacing:-.08em;color:rgba(255,255,255,.06);transform:rotate(-8deg)}
+    .drop{padding:110px 5vw}.drop-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:55px}
+    .drop h2{font-size:54px;letter-spacing:-.06em;margin:8px 0}.desc{max-width:360px;color:var(--muted);font-size:11px;line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .product{min-width:0}.product-img{aspect-ratio:3/4;background:#1b1b19;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .tee,.hoodie,.cap{position:relative;filter:drop-shadow(0 18px 18px rgba(0,0,0,.5))}
+    .tee{width:58%;height:52%;background:#d8d8d2;clip-path:polygon(18% 0,36% 9%,64% 9%,82% 0,100% 25%,79% 40%,73% 100%,27% 100%,21% 40%,0 25%)}
+    .tee:after{content:"NO SIGNAL";position:absolute;left:23%;top:46%;font-size:9px;color:#111;font-weight:900;letter-spacing:-.05em}
+    .hoodie{width:62%;height:57%;background:#0c0c0c;border-radius:20px 20px 7px 7px;clip-path:polygon(28% 0,72% 0,88% 14%,100% 24%,84% 38%,78% 100%,22% 100%,16% 38%,0 24%,12% 14%)}
+    .hoodie:after{content:"NO SIGNAL";position:absolute;left:30%;top:48%;font-size:8px;color:#eee;font-weight:900}
+    .cap{width:62%;height:28%;background:#0d0d0d;border-radius:50% 50% 12% 12%;transform:perspective(100px) rotateX(18deg)}
+    .cap:after{content:"NO SIGNAL";position:absolute;left:31%;top:42%;font-size:7px;color:#ddd;font-weight:900}
+    .name{font-size:10px;letter-spacing:.25em;text-transform:uppercase;margin-top:15px}.price{font-size:10px;color:var(--muted);margin-top:7px}
+    .story{padding:100px 5vw;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:8vw}
+    .story h2{font-size:clamp(42px,6vw,88px);line-height:.9;letter-spacing:-.07em;margin:0}.story p{color:#aaa;font-size:12px;line-height:2;max-width:430px}
+    footer{padding:45px 5vw;display:flex;justify-content:space-between;gap:20px;font-size:9px;letter-spacing:.25em;color:#8e8e89;text-transform:uppercase}
+    @media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:120px}.hero-photo{height:50vh;min-height:320px}.grid{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr}footer{flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#">NO SIGNAL<span>®</span></a>
+  <nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#journal">Journal</a></nav>
+  <a class="bag" href="#shop">Bag (0)</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">CLOTHING COMPANY / EST. 2024</div>
+    <h1>NO<br>SIGNAL<span style="font-size:.12em;vertical-align:top">®</span></h1>
+    <div class="pulse"><i></i></div>
+    <p class="lead">A clothing company built around the noise, the silence, and everything in between.</p>
+    <a class="cta" href="#shop">Shop collection →</a>
+  </div>
+  <div class="hero-photo" aria-label="Editorial placeholder for campaign photography"></div>
+</section>
+
+<section class="drop" id="shop">
+  <div class="drop-head">
+    <div><div class="eyebrow">NEW DROP</div><h2>DROP 01</h2></div>
+    <p class="desc">The first collection. Heavyweight essentials, distorted graphics and everyday pieces made to disappear into the city.</p>
+  </div>
+  <div class="grid">
+    <article class="product"><div class="product-img"><div class="tee"></div></div><div class="name">Signal Tee</div><div class="price">$45.00</div></article>
+    <article class="product"><div class="product-img"><div class="hoodie"></div></div><div class="name">Classic Hoodie</div><div class="price">$75.00</div></article>
+    <article class="product"><div class="product-img"><div class="tee" style="background:#242421"></div></div><div class="name">Distorted Tee</div><div class="price">$48.00</div></article>
+    <article class="product"><div class="product-img"><div class="cap"></div></div><div class="name">Signal Cap</div><div class="price">$30.00</div></article>
+  </div>
+</section>
+
+<section class="story" id="about">
+  <h2>STAY<br>OFFLINE.</h2>
+  <div>
+    <div class="eyebrow">ABOUT NO SIGNAL</div>
+    <p>NO SIGNAL® started with a simple idea: make clothes that feel like us. Not loud for the sake of being loud. Not made to fit everyone. Just a visual language, a few good pieces, and a world around them.</p>
+    <p id="journal">MORE DROPS. MORE STORIES. LESS NOISE.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>NO SIGNAL® — CLOTHING COMPANY</div>
+  <div>EST. 2024</div>
+  <div>Instagram / TikTok / Contact</div>
+</footer>
+</body>
+</html>
